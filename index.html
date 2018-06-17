@@ -2,11 +2,11 @@
 <html>
 
     <head>
-        <title>2015726101±èÁÖÀ±</title>
+        <title>2015726101ê¹€ì£¼ìœ¤</title>
         <style type="text/css">
            
            #tabs{
-           font-size: 15;
+           font-size: 20;
            width: 750px;
            height: 1100px;
            background-color:rgb(9, 40, 44);
@@ -56,7 +56,7 @@ color:white;
                 align-items: center;
                 overflow: hidden;
                 box-shadow: inset 0 0px 3px;
-                font-size: 20px digital;
+                font-size: 30px digital;
             }
             #graph1{
 
@@ -125,13 +125,13 @@ color:white;
                 display: inline-flex;
                 overflow: hidden;
                 box-shadow: inset 0 0px 1px;
-                font-size: 20px digital;
+                font-size: 30px digital;
             }
            
            
     
             #aa {
-                width: 600px;
+                width: 620px;
                 height: 150px;
                 background-color:beige;
                 overflow: scroll;
@@ -216,21 +216,21 @@ color:white;
             });
 
             $(function(){
-           max = 30;      //±Û¾¾ ÃÖ´ë Å©±â
-           min = 10;     //±Û¾¾ ÃÖ¼Ò Å©±â
+           max = 30;      //ê¸€ì”¨ ìµœëŒ€ í¬ê¸°
+           min = 10;     //ê¸€ì”¨ ìµœì†Œ í¬ê¸°
            var fontSize = 20; 
-        $("#zoomin").click(function (e){    //+¹öÆ°À» ´©¸£¸é
+        $("#zoomin").click(function (e){    //+ë²„íŠ¼ì„ ëˆ„ë¥´ë©´
         if(fontSize < max){
             fontSize = fontSize + 2; 
-        }else alert("°¡Àå Å« ÆùÆ®Å©±â ÀÔ´Ï´Ù.");
-        $("#list").css({"font-size": fontSize + "px"});//ÆùÆ®»çÀÌÁî º¯°æ
+        }else alert("ê°€ì¥ í° í°íŠ¸í¬ê¸° ì…ë‹ˆë‹¤.");
+        $("#list").css({"font-size": fontSize + "px"});//í°íŠ¸ì‚¬ì´ì¦ˆ ë³€ê²½
         $("#latex").css({"font-size": fontSize + "px"});
     });
-    $("#zoomout").click(function (e){   //-¹öÆ°À» ´©¸£¸é
+    $("#zoomout").click(function (e){   //-ë²„íŠ¼ì„ ëˆ„ë¥´ë©´
         if(fontSize > min){ 
             fontSize = fontSize-2;  
-        }else alert("°¡Àå ÀÛÀº ÆùÆ®Å©±â ÀÔ´Ï´Ù.");
-        $("#list").css({"font-size": fontSize + "px"});//ÆùÆ®»çÀÌÁî º¯°æ 
+        }else alert("ê°€ì¥ ì‘ì€ í°íŠ¸í¬ê¸° ì…ë‹ˆë‹¤.");
+        $("#list").css({"font-size": fontSize + "px"});//í°íŠ¸ì‚¬ì´ì¦ˆ ë³€ê²½ 
         $("#latex").css({"font-size": fontSize + "px"});
     }); 
 });
@@ -239,15 +239,15 @@ color:white;
             $(document).ready(function () {
                 var parser = math.parser();
     
-                var value = '0'; //°è»ê°ªµéÀ» º¸¿©ÁÖ´Â º¯¼ö
-                var saveValue=''; //°è»ê °á°ú°ª ÀúÀåÇØÁÖ´Â º¯¼ö
-                var infor=''; //°è»ê°úÁ¤À» ÀúÀåÇØÁÖ´Â º¯¼ö
+                var value = '0'; //ê³„ì‚°ê°’ë“¤ì„ ë³´ì—¬ì£¼ëŠ” ë³€ìˆ˜
+                var saveValue=''; //ê³„ì‚° ê²°ê³¼ê°’ ì €ì¥í•´ì£¼ëŠ” ë³€ìˆ˜
+                var infor=''; //ê³„ì‚°ê³¼ì •ì„ ì €ì¥í•´ì£¼ëŠ” ë³€ìˆ˜
     
               
                 $('#result').text(value);
                 $('#latex').html('$$' + math.parse(value).toTex() + '$$');
                        
-                $('.key2').each(function (index, key2) {   //key2¿¡ ÀÖ´Â ¹öÆ°ÀÌ ´­¸±¶§
+                $('.key2').each(function (index, key2) {   //key2ì— ìˆëŠ” ë²„íŠ¼ì´ ëˆŒë¦´ë•Œ
                     $(this).click(function (e) {
                         if (value == '0') value = '';
     
@@ -266,16 +266,16 @@ color:white;
 
     
     
-                $('.key').each(function (index, key) {  //key¿¡ ÀÖ´Â ¹öÆ°ÀÌ ´­¸±¶§
+                $('.key').each(function (index, key) {  //keyì— ìˆëŠ” ë²„íŠ¼ì´ ëˆŒë¦´ë•Œ
                     $(this).click(function (e) {
                         if (value == '0') value = '';
     
     
     
-                        if($(this).text() =='Enter')//Enter¹öÆ°ÀÌ ´­¸±¶§
+                        if($(this).text() =='Enter')//Enterë²„íŠ¼ì´ ëˆŒë¦´ë•Œ
                     {
                         try
-                        {   infor=infor+value+"   ";//infor °è»ê°úÁ¤À» ÀúÀåÇØÁÖ´Â º¯¼ö 
+                        {   infor=infor+value+"   ";//infor ê³„ì‚°ê³¼ì •ì„ ì €ì¥í•´ì£¼ëŠ” ë³€ìˆ˜ 
                             $('#list').text(infor);  
                             value = parser.eval(value).toString();
                             var tokens = value.split(' ');
@@ -286,7 +286,7 @@ color:white;
                             }
                             $('#result').text(value); 
                                     saveValue='';               
-                                   saveValue=value;//ÀúÀåµÈ °ªÀ» ³ªÅ¸³»ÁÖ±â À§ÇÑ º¯¼ö
+                                   saveValue=value;//ì €ì¥ëœ ê°’ì„ ë‚˜íƒ€ë‚´ì£¼ê¸° ìœ„í•œ ë³€ìˆ˜
                                   value = '0';
                         }
                         catch (e)
@@ -300,14 +300,14 @@ color:white;
                     }
     
                         else {
-                            if ($(this).text() == 'CL') {    //CL ¹öÆ°ÀÌ ´­¸±¶§
+                            if ($(this).text() == 'CL') {    //CL ë²„íŠ¼ì´ ëˆŒë¦´ë•Œ
                                 value = '0';
                                 infor='';
                                 saveValue='';
                                 $('#list').text(infor);  
                                 $('#result').text(value);
                             }
-                            else if ($(this).text() == '<-') {  //¡ç¹öÆ°ÀÌ ´­¸±¶§
+                            else if ($(this).text() == '<-') {  //â†ë²„íŠ¼ì´ ëˆŒë¦´ë•Œ
                                 value = value.substring(0, value.length - 1);
                                 $('#result').text(value);}
                             else {
@@ -341,25 +341,25 @@ color:white;
                            $('#graph3').text(reset);
                 })
 
-                $('#save').click(function (e) {   //ÀúÀå±â´É
+                $('#save').click(function (e) {   //ì €ì¥ê¸°ëŠ¥
     localStorage.setItem('val1',saveValue);
     localStorage.setItem('val2',infor); 
     })
     
-    $('#delete').click(function (e) {   //ÀúÀå»èÁ¦±â´É
+    $('#delete').click(function (e) {   //ì €ì¥ì‚­ì œê¸°ëŠ¥
     localStorage.removeItem('val1');
     localStorage.removeItem('val2');
     
     })
     
-    $('#get').click(function (e) {     //ºÒ·¯¿À±â ±â´É
+    $('#get').click(function (e) {     //ë¶ˆëŸ¬ì˜¤ê¸° ê¸°ëŠ¥
     var getValue =localStorage.getItem('val1');
     var getValue2 =localStorage.getItem('val2');
     $('#result').text(getValue);
     $('#list').text(getValue2);
     })
             })
-    //±×·¡ÇÁ ÇÔ¼ö 
+    //ê·¸ë˜í”„ í•¨ìˆ˜ 
             function Graph(config) {
         
           this.canvas = document.getElementById(config.canvasId);
@@ -386,16 +386,16 @@ color:white;
           this.scaleX = this.canvas.width / this.rangeX;
           this.scaleY = this.canvas.height / this.rangeY;
   
-          //x,y Ãà ±×¸®±â
+          //x,y ì¶• ê·¸ë¦¬ê¸°
           this.drawXAxis();
           this.drawYAxis();
 
           
         }
   
-       /*Ãà ±×¸®±â*/
+       /*ì¶• ê·¸ë¦¬ê¸°*/
 
-//xÃà ±×¸®±â
+//xì¶• ê·¸ë¦¬ê¸°
 Graph.prototype.drawXAxis = function() {
           var context = this.context;
           context.save();
@@ -413,7 +413,7 @@ Graph.prototype.drawXAxis = function() {
           context.textAlign = 'center';
           context.textBaseline = 'top';
   
-          // ¿ŞÂÊ ´«±İ ±ß±â
+          // ì™¼ìª½ ëˆˆê¸ˆ ê¸‹ê¸°
           xPos = this.centerX - xPosIncrement;
           unit = -1 * this.unitsPerTick;
           while(xPos > 0) {
@@ -425,7 +425,7 @@ Graph.prototype.drawXAxis = function() {
             xPos = Math.round(xPos - xPosIncrement);
           }
   
-          // ¿À¸¥ÂÊ ´«±İ ±ß±â
+          // ì˜¤ë¥¸ìª½ ëˆˆê¸ˆ ê¸‹ê¸°
           xPos = this.centerX + xPosIncrement;
           unit = this.unitsPerTick;
           while(xPos < this.canvas.width) {
@@ -440,7 +440,7 @@ Graph.prototype.drawXAxis = function() {
         };
   
 
-        //yÃà ±×¸®±â
+        //yì¶• ê·¸ë¦¬ê¸°
         Graph.prototype.drawYAxis = function() {
           var context = this.context;
           context.save();
@@ -458,7 +458,7 @@ Graph.prototype.drawXAxis = function() {
           context.textAlign = 'right';
           context.textBaseline = 'middle';
   
-          //À§ÂÊ ´«±İ ±×¸®±â
+          //ìœ„ìª½ ëˆˆê¸ˆ ê·¸ë¦¬ê¸°
           yPos = this.centerY - yPosIncrement;
           unit = this.unitsPerTick;
           while(yPos > 0) {
@@ -470,7 +470,7 @@ Graph.prototype.drawXAxis = function() {
             yPos = Math.round(yPos - yPosIncrement);
           }
   
-          // ¾Æ·§ÂÊ ´«±İ ±×¸®±â
+          // ì•„ë«ìª½ ëˆˆê¸ˆ ê·¸ë¦¬ê¸°
           yPos = this.centerY + yPosIncrement;
           unit = -1 * this.unitsPerTick;
           while(yPos < this.canvas.height) {
@@ -485,7 +485,7 @@ Graph.prototype.drawXAxis = function() {
         };
 
 
-//±×·¡ÇÁ ±×¸®±â
+//ê·¸ë˜í”„ ê·¸ë¦¬ê¸°
           function draw() {
 
          var range = document.getElementById("range").value;
@@ -517,11 +517,11 @@ Graph.prototype.drawXAxis = function() {
         Graph.prototype.transformContext = function() {
           var context = this.context;
   
-         this.context.translate(this.centerX+x*16, this.centerY-(16*y)); //ÀÔ·Â¹ŞÀº ¸¸Å­ ÃàÀÌµ¿ 
+         this.context.translate(this.centerX+x*16, this.centerY-(16*y)); //ì…ë ¥ë°›ì€ ë§Œí¼ ì¶•ì´ë™ 
            context.scale(this.scaleX, -this.scaleY);
         };
 
-        //±×·¡ÇÁ ¹üÀ§
+        //ê·¸ë˜í”„ ë²”ìœ„
         var myGraph = new Graph({
           canvasId: 'myCanvas',
           minX: -range,
@@ -571,7 +571,7 @@ function erase() {
                     </a>
                 </li>
                 <li>
-                    <!--±ÛÀÚ Å©±â¸¦ ´Ã·ÁÁÖ°í ÁÙ¿©ÁÖ´Â ¹öÆ°-->
+                    <!--ê¸€ì í¬ê¸°ë¥¼ ëŠ˜ë ¤ì£¼ê³  ì¤„ì—¬ì£¼ëŠ” ë²„íŠ¼-->
                         <button id="zoomin" >+</button> 
                         <button id="zoomout">-</button>
                         font size
@@ -583,7 +583,7 @@ function erase() {
                 <div  id="latex" ></div>
                  <div id="result" ></div>
           
-                <div id="aa" > <!--½ºÅ©·Ñ ¹Ú½º-->
+                <div id="aa" > <!--ìŠ¤í¬ë¡¤ ë°•ìŠ¤-->
                    
                     <button class="key2" value="<"><</button>
                     <button  class="key2" value=">">></button>
@@ -602,7 +602,7 @@ function erase() {
                             <button  class="key2" value="g">g</button>
                                     <br>-------------------------------------------------------------------------------------------------------------------<br>
                             <button class="key2" value="^">^</button>
-                            <button  class="key2" value="sqrt">¡î</button>
+                            <button  class="key2" value="sqrt">âˆš</button>
                            
                        
                               <br>-------------------------------------------------------------------------------------------------------------------<br>
@@ -610,10 +610,10 @@ function erase() {
                             <button  class="key2" value="log(">log</button>
                             <button  class="key2" value="i">i</button>
                             <button  class="key2" value="e">e</button>
-                            <button  class="key2" value="pi">¥ğ</button>
+                            <button  class="key2" value="pi">Ï€</button>
                              <br>-------------------------------------------------------------------------------------------------------------------<br>
                            
-                            <button  class="key2" value="cross">u ¡¿ v</button>
+                            <button  class="key2" value="cross">u Ã— v</button>
                             <button  class="key2" value="det">|A|</button>
                             <button  class="key2" value="inv">A^-1</button>
                                     <br>-------------------------------------------------------------------------------------------------------------------<br>
@@ -625,7 +625,7 @@ function erase() {
                          <button  class="key2" value="inch">inch</button>
                          
                 </div>
-                <div id="bb"> <!--°è»ê±â ¼ıÀÚ¹öÆ° ¹Ú½º-->
+                <div id="bb"> <!--ê³„ì‚°ê¸° ìˆ«ìë²„íŠ¼ ë°•ìŠ¤-->
     
                
                     <span class="key" >7</span>
@@ -665,11 +665,11 @@ function erase() {
     
                 </div>
                
-              <!--ÀúÀå,ºÒ·¯¿À±â,ÀúÀå»èÁ¦ ¹öÆ°µé-->
+              <!--ì €ì¥,ë¶ˆëŸ¬ì˜¤ê¸°,ì €ì¥ì‚­ì œ ë²„íŠ¼ë“¤-->
               <!--
-                <button id="save">ÀúÀå</button>      
-                <button id="get">ºÒ·¯¿À±â</button>
-                <button id="delete">ÀúÀå»èÁ¦</button>
+                <button id="save">ì €ì¥</button>      
+                <button id="get">ë¶ˆëŸ¬ì˜¤ê¸°</button>
+                <button id="delete">ì €ì¥ì‚­ì œ</button>
                 -->
                 <h1>graph &nbsp;
                 <button id="btn1">1</button>
